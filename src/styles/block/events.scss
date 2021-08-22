@@ -1,0 +1,103 @@
+.event {
+  padding-top: 10px;
+
+  @include tablet {
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    @include weight-size-height(700, 36px, 45px);
+    color: $black-color;
+    padding-bottom: 60px;
+
+
+    @include tablet {
+      @include weight-size-height(700, 48px, 58px);
+    }
+
+    @include desktop {
+      padding-bottom: 140px;
+    }
+  }
+
+  &__card:first-child {
+    margin-bottom: 60px;
+
+    @include desktop {
+    }
+  }
+
+  &__info {
+    @extend %secondary-text;
+    padding-bottom: 20px;
+    
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__date {
+    padding-right: 20px;
+    color: $red-color;
+  }
+
+  &__category {
+    color: $background-color;
+  }
+
+  &__subtitle {
+    @include weight-size-height(700,24px,30px);
+    padding-bottom: 20px;
+  }
+
+  &__description {
+    @extend %secondary-text;
+    color: $background-color;
+    padding-bottom: 40px;
+  }
+
+  &__category-tablet {
+    display: none;
+    @extend %secondary-text;
+    padding-bottom: 10px;
+    color: $background-color;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__schedule {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__day {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: transparent;
+    @include weight-size-height(700,36px,36px);
+    color: $red-color;
+  }
+
+  &__hour {
+    @include weight-size-height(700,24px,24px);
+    color: $red-color;
+    transform: translateX(25%);
+  }
+
+  &__image-box {
+    display: none;
+
+    @media (min-width:1170px) {
+      display: block;
+      transform: translateY(-20%);
+
+      &--gudimov {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}

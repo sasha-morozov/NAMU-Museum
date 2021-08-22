@@ -1,0 +1,194 @@
+.exhibitions {
+  position: relative;
+
+  &__card {
+
+    margin-bottom: 90px;
+
+    @include tablet {
+      margin-bottom: 150px;
+    }
+
+    @include desktop {
+      margin-bottom: 250px;
+    }
+
+   @include desktop {
+
+    &--angel {
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        background-image: url(../images/Belm.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        pointer-events: none;
+
+        height: 816px;
+      }
+    }
+
+    &--art {
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 40%;
+        right: 0;
+        left: 0;
+
+        background-image: url(../images/girl_and_man.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+
+        pointer-events: none;
+
+        height: 380px;
+      }
+
+      &::before {
+        content: "Мистецтво ХХ ст. - ХХі ст.";
+
+        position: absolute;
+        top: 34%;
+        right: 0;
+
+        @include weight-size-height(700,135px,1);
+        overflow-wrap: break-word;
+        text-transform: uppercase;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-fill-color: transparent;
+
+        width: 550px;
+      }
+    }
+
+    &--cossack {
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 62%;
+        left: 5%;
+        right: 0;
+
+        background-image: url(../images/kobzar.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        pointer-events: none;
+
+        height: 450px;
+      }
+
+      &::before {
+        content: "Стародавнє мистецтво";
+
+        position: absolute;
+        left:5%;
+        top: 60%;
+
+        @include weight-size-height(700,135px,1);
+        overflow-wrap: break-word;
+        text-transform: uppercase;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-fill-color: transparent;
+
+        width: 500px;
+      }
+    }
+  }
+
+  }
+
+  &__title {
+    @include weight-size-height(700,36px,45px);
+    color: $black-color;
+    padding: 60px 0;
+
+    @include tablet {
+      @include weight-size-height(700, 48px, 58px);
+    }
+    
+    @include desktop {
+      padding: 100px 0;
+    }
+  }
+
+  &__date {
+    @include weight-size-height(700,24px,30px);
+    color: $red-color;
+    padding-bottom: 10px;
+
+    @include tablet {
+      @include weight-size-height(700, 48px, 58px);
+    }
+  }
+
+  &__available {
+    @extend %secondary-text;
+    color: $red-color;
+    padding-bottom: 5px;
+
+    @include desktop {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    @include weight-size-height(700, 24px, 30px);
+    color: $black-color;
+    padding-bottom: 30px;
+
+    @include tablet {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__wrap {
+    display: block;
+
+    @include tablet {
+      display: initial;
+    }
+  }
+
+  &__description {
+    @extend %secondary-text;
+    color: $background-color;
+    width: 150px;
+
+    @include tablet {
+      width: 270px;
+    }
+
+    @include desktop {
+      width: 370px;
+      padding-bottom: 50px;
+    }
+
+    &--right {
+      margin-left: auto;
+
+      @include tablet {
+        margin-left: initial;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include desktop {
+      display: flex;
+    }
+  }
+}

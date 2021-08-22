@@ -1,0 +1,22 @@
+.button {
+  @extend %flex-center;
+  @extend %secondary-text;
+  
+  box-sizing: border-box;
+  height: 60px;
+  width: 280px;
+
+  color: $primary-color;
+  background-color: $red-color;
+  text-decoration: none;
+  line-height: 16px;
+  border-radius: 2px;
+
+  transition: transform 0.3s, border-radius 0.3s;
+
+  &:hover {
+    transform: translateY(-5%);
+    box-shadow: 0 15px 20px rgba(202, 18, 18, 0.4);
+    border-radius: 8px;
+  }
+}
