@@ -52,7 +52,7 @@
 
     &:hover {
       border-bottom: 1px solid $primary-color;
-    } 
+    }
   }
 
   &__image {
@@ -63,10 +63,14 @@
     display: none;
     background-image: url(/images/boy.png);
     background-position: right bottom;
-    height: 880px;
+    height: 600px;
 
     @include desktop {
       display: block;
+    }
+
+    @media (min-width: 1280px) {
+      height: 800px;
     }
   }
 
