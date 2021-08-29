@@ -13,16 +13,9 @@
       margin-bottom: 250px;
     }
 
-   @include desktop {
-
     &--angel {
       &::before {
         content: "";
-
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
 
         background-image: url(../images/Belm.png);
         background-repeat: no-repeat;
@@ -30,7 +23,24 @@
 
         pointer-events: none;
 
-        height: 816px;
+        position: absolute;
+        top: 25%;
+        right:0;
+        left: 0;
+
+        height: 256px;
+        transform: scaleX(-1);
+
+        @include tablet {
+          top: 15%;
+          height: 380px;
+          transform: scaleX(1);
+        }
+
+        @include desktop {
+          top: 0;
+          height: 820px;
+        }
       }
     }
 
@@ -39,23 +49,37 @@
       &::after {
         content: "";
 
-        position: absolute;
-        top: 40%;
-        right: 0;
-        left: 0;
-
         background-image: url(../images/girl_and_man.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: right;
 
-        pointer-events: none;
+        position: absolute;
+        top: 55%;
+        right: 0;
+        left: 0;
 
-        height: 380px;
+        pointer-events: none;
+        transform: scaleX(-1);
+
+        height: 140px;
+
+        @include tablet {
+          top: 40%;
+
+          height: 250px;
+          transform: scaleX(1);
+        }
+
+        @include desktop {
+          top: 40%;
+          height: 380px;
+        }
       }
 
       &::before {
         content: "Мистецтво ХХ ст. - ХХі ст.";
+        display: none;
 
         position: absolute;
         top: 34%;
@@ -68,6 +92,10 @@
         -webkit-text-fill-color: transparent;
 
         width: 550px;
+
+        @include desktop {
+          display: initial;
+        }
       }
     }
 
@@ -75,22 +103,37 @@
       &::after {
         content: "";
 
-        position: absolute;
-        top: 62%;
-        left: 5%;
-        right: 0;
-
         background-image: url(../images/kobzar.png);
         background-repeat: no-repeat;
         background-size: contain;
 
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        right: 0;
+
         pointer-events: none;
 
-        height: 450px;
+        height: 200px;
+
+        @include tablet {
+          height: 250px;
+
+          top: 65%;
+          left: 0;
+        }
+
+        @include desktop {
+          height: 380px;
+
+          left: 5%;
+          top: 62%;
+        }
       }
 
       &::before {
         content: "Стародавнє мистецтво";
+        display: none;
 
         position: absolute;
         left:5%;
@@ -103,9 +146,12 @@
         -webkit-text-fill-color: transparent;
 
         width: 500px;
+
+        @include desktop {
+          display: initial;
+        }
       }
     }
-  }
 
   }
 
