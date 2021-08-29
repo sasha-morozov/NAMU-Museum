@@ -18,4 +18,4 @@ The main purpose of this project is mastering HTML & SCSS with minimum JS involv
 
 Link to the [Figma layout](https://www.figma.com/file/HL3XGt5ZatvJoYBhOaWY5x/museum-prototype?node-id=323%3A1957)
 
-Link to the [web-page](https://sasha-morozov.github.io/Museum-NAMU/)
+Link to the [web-page](https://sasha-morozov.github.io/NAMU-Museum/)
